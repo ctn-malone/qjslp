@@ -13,8 +13,8 @@ import { getScriptName } from 'ext/path.js';
         - $i is the 0-based index of current line
       
         If function returns {undefined}, {null} or {false} line will be ignored
-        If function return something which is not a string or a number, input line will keep its value
-        If {$_} is assigned a new value, this new value will be printed
+        If function returns something which is not a string or a number, input line will keep its value
+        If {$_} is assigned a new value, input line will have this new value
 
         When using $_!.{fn}, code will be replaced with $_ = $_.{fn}
         

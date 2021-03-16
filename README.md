@@ -27,6 +27,21 @@ Usage: qjslp [-h|--help] [-c,--code] [-b,--begin] [-e|--end] [-q|--quiet] [-d|--
     -h, --help:     print help
 ```
 
+Inside a `code` section
+
+* if function returns `undefined`, `null` or `false` line will be ignored
+* if function returns something which is not a *string* or a *number*, input line will keep its value
+* if `$_` is assigned a new value, input line will have this new value
+
+Following function are provided as helper in `begin`, `end` and `code` sections
+
+* $p : print to *stdout*
+* $e : print to *stderr*
+
+Following shortcuts are also provided in `code` sections
+
+* `$_!.{fn}` => `$_ = $_.{fn}` (example: `$_!.toUpperCase()` => `$_ = $_.toUpperCase()`)
+
 # Examples
 
 <u>NB</u> : a better alternative is likely to exist using common unix tools ;)
