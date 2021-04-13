@@ -45,7 +45,7 @@ const VERSION = '0.1.0';
 const getUsage = () => {
     const message = `
 Usage: ${getScriptName()} [-h|--help] [-c,--code] [-b,--begin] [-e|--end] [-q|--quiet] [-d|--debug] [--debug-store]
-    -c  --code:     code to execute for each line ($_ is the current line, $$ is the global store object,
+    -c, --code:     code to execute for each line ($_ is the current line, $$ is the global store object,
                     $i is the 0-based index of current line)
                     Can be specified multiple times
     -b, --begin:    code to execute before processing lines ($$ is the global store object)
